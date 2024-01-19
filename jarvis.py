@@ -32,15 +32,15 @@ def take_command():
     except:
         return ""
 
-def run_jarvis():
-    command = take_command()
-    if 'hello' in command:
-        talk('hi boss how are you')
-    elif 'exit' in command:
-        talk('goodbye!')
-        exit()
-    else:
-        talk("i dont understand")
+# def run_jarvis():
+#     command = take_command()
+#     if 'hello' in command:
+#         talk('hi boss how are you')
+#     elif 'exit' in command:
+#         talk('goodbye!')
+#         exit()
+#     else:
+#         talk("i dont understand")
 
 talk('hello world, mero naam jaaarvhi')
 
