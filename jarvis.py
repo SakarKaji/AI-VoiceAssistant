@@ -42,7 +42,7 @@ def run_jarvis():
     else:
         talk("i dont understand")
 
-talk('hello world, mero naam jarvi')
+talk('hello world, mero naam jaaarvhi')
 
 while True:
     run_jarvis()
