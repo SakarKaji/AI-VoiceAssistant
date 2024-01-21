@@ -1,5 +1,6 @@
 import pyttsx3
 import speech_recognition as sr #we use speechrecognition many times and it ll be long so we created shortcut as sr 
+import datetime
 
 listener = sr.Recognizer() #listener is a variable and recognizer is a fn
 
@@ -31,6 +32,18 @@ def take_command():
             return command
     except:
         return ""
+    
+def greeting() :
+    current_time = datetime.datetime.now()
+    hour = current_time.hour
+    print(current_time,hour)
+    if 3 <= hour <= 12:
+     talk('goodmornin sir')
+    elif 12 <= hour <24:
+     talk('goodevenin sir')
+
+
+
 
 # def run_jarvis():
 #     command = take_command()
@@ -42,10 +55,14 @@ def take_command():
 #     else:
 #         talk("i dont understand")
 
-talk('hello world, mero naam jaaarvhi')
+talk('hello world, mero naam jarvi')
 
-while True:
-    run_jarvis()
+greeting()
+
+# while True:
+#     run_jarvis()
+
+
 
 
 
