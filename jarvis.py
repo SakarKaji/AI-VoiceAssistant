@@ -1,6 +1,8 @@
 import pyttsx3
 import speech_recognition as sr #we use speechrecognition many times and it ll be long so we created shortcut as sr 
 import datetime
+import pyjokes
+import pyaudio
 
 listener = sr.Recognizer() #listener is a variable and recognizer is a fn
 
@@ -26,7 +28,7 @@ def take_command():
         with sr.Microphone() as source:
             print('listening...')
             voice = listener.listen(source)
-            command = listener.recognize_google_cloud(voice)
+            command = listener.recognize_google_cloud(voice, language="en")
             command = command.lower()
             print(command)
             return command
@@ -55,14 +57,22 @@ def greeting() :
 #         talk('goodbye!')
 #         exit()
 #     else:
-#         talk("i dont understand")
+#       talk("i dont understand")
+     
+def run_jarvi():
+     command = take_command()
+    #  if 'hello' in command:
+    #     talk('hi boss how are you')
+     if 'joke' in command:
+       talk(pyjokes.get_joke())
 
 talk('hello world, mero naam jarvi')
 
 greeting()
 
-# while True:
-#     run_jarvis()
+while True:
+    run_jarvi()
+
 
 
 
