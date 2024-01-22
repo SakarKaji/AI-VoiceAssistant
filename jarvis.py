@@ -39,8 +39,10 @@ def greeting() :
     print(current_time,hour)
     if 3 <= hour <= 12:
      talk('goodmornin sir')
-    elif 12 <= hour <24:
-     talk('goodevenin sir')
+    elif 12 <= hour <17:
+     talk('goodafternoon sir')
+    elif 17 <= hour <19:
+     talk('goodevening sir')
 
 
 
